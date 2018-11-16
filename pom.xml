@@ -12,6 +12,7 @@
         <module>sword-management</module>
         <module>sword-service-api</module>
         <module>sword-service</module>
+        <module>sword-core</module>
     </modules>
     <packaging>pom</packaging>
 

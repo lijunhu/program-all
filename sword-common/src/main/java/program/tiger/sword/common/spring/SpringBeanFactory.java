@@ -1,4 +1,4 @@
-package program.tiger.sword.common;
+package program.tiger.sword.common.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
