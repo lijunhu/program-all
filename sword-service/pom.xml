@@ -20,4 +20,33 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>ROOT</finalName>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/profiles/${deploy.type}</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources/</directory>
+            </resource>
+            <resource>
+                <directory>src/main/templates/</directory>
+                <targetPath>/templates/</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
+    </build>
 </project>

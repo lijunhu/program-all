@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+
 public class SpringBeanFactory implements ApplicationContextAware {
 
     /**
@@ -18,6 +19,7 @@ public class SpringBeanFactory implements ApplicationContextAware {
      */
     private ApplicationContext applicationContext;
 
+    @Override
     public void setApplicationContext(ApplicationContext applicationContext){
         this.applicationContext = applicationContext;
     }

@@ -13,11 +13,6 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>com.program.tiger</groupId>
-            <artifactId>sword-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
 </project>
