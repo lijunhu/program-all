@@ -1,8 +1,6 @@
 package program.tiger.sword.common.dp.aop;
 
 
-import lombok.extern.java.Log;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -10,7 +8,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 import program.tiger.sword.common.dp.annotation.Read;
-import program.tiger.sword.common.dp.annotation.Write;
 import program.tiger.sword.common.dp.datasource.ConnectionType;
 import program.tiger.sword.common.dp.datasource.ConnectionTypeHolder;
 
