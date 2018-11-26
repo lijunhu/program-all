@@ -8,9 +8,7 @@ import org.springframework.util.Assert;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.ConnectionBuilder;
 import java.sql.SQLException;
-import java.sql.ShardingKeyBuilder;
 import java.util.Map;
 import java.util.Random;
 
