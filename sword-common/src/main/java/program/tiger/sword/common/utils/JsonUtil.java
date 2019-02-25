@@ -22,7 +22,7 @@ public class JsonUtil {
 
     private final static ObjectMapper objectMapper = new ObjectMapper();
 
-    public void JsonUtils() {
+    public void JsonUtil() {
 
     }
 
