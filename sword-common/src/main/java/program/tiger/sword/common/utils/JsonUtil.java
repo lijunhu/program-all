@@ -27,7 +27,6 @@ public class JsonUtil {
     }
 
     public static ObjectMapper getInstance() {
-
         return objectMapper;
     }
 
@@ -37,7 +36,9 @@ public class JsonUtil {
     }
 
     /**
-     * javaBean,list,array convert to json string
+     * object 转 json
+     * @param obj
+     * @return
      */
     public static String toJson(Object obj) {
         try {
@@ -49,14 +50,22 @@ public class JsonUtil {
     }
 
     /**
-     * json string convert to javaBean
+     * json 转 bean
+     * @param jsonStr
+     * @param clazz
+     * @param <T>
+     * @return
+     * @throws Exception
      */
     public static <T> T toBean(String jsonStr, Class<T> clazz) throws Exception {
         return objectMapper.readValue(jsonStr, clazz);
     }
 
     /**
-     * json string convert to map
+     * json 转map
+     * @param jsonStr
+     * @return
+     * @throws Exception
      */
     public static Map<String, Object> toMap(String jsonStr) throws Exception {
         if (jsonStr != null && !"".equals(jsonStr)) {
@@ -67,7 +76,12 @@ public class JsonUtil {
     }
 
     /**
-     * json string convert to map with javaBean
+     * json string 转 map with javaBean
+     * @param jsonStr
+     * @param clazz
+     * @param <T>
+     * @return
+     * @throws Exception
      */
     public static <T> Map<String, T> toMapBean(String jsonStr, Class<T> clazz) throws Exception {
         Map<String, Map<String, Object>> map = objectMapper.readValue(jsonStr, new TypeReference() {
@@ -80,7 +94,12 @@ public class JsonUtil {
     }
 
     /**
-     * json array string convert to list with javaBean
+     * json 转数组
+     * @param jsonArrayStr
+     * @param clazz
+     * @param <T>
+     * @return
+     * @throws Exception
      */
     public static <T> List<T> toList(String jsonArrayStr, Class<T> clazz) throws Exception {
         List<Map<String, Object>> list = objectMapper.readValue(jsonArrayStr, new TypeReference<List<T>>() {
@@ -93,13 +112,18 @@ public class JsonUtil {
     }
 
     /**
-     * map convert to javaBean
+     * map 转 bean
+     * @param map
+     * @param clazz
+     * @param <T>
+     * @return
      */
     public static <T> T mapToBean(Map map, Class<T> clazz) {
         return objectMapper.convertValue(map, clazz);
     }
 
     /**
+     *
      * @param value
      * @param callback
      * @return

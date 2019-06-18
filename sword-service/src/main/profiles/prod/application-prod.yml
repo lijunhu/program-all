@@ -4,6 +4,11 @@ server:
     max-threads: 200
     uri-encoding: UTF-8
 
+logging:
+  config: classpath:logback-spring.xml
+  path: ~/Logs/program-all/managment
+
+
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
