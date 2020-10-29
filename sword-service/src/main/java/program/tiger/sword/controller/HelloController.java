@@ -2,9 +2,9 @@ package program.tiger.sword.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import reactor.core.publisher.Flux;
 
 /**
  * @author junhu.li
@@ -15,9 +15,9 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class HelloController {
-    @RequestMapping("/hello")
-    public String hello(HttpServletRequest request, @RequestParam(value = "name", required = false, defaultValue = "springboot-thymeleaf") String name) {
-        request.setAttribute("name", name);
-        return "hello";
+    @RequestMapping(path = "/hello", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public Flux<String> hello() {
+        return Flux.just("hello");
     }
 }

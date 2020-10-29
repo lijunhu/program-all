@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Aspect;
  * @date 2018年11月26日21:23:18
  */
 @Aspect
-public class ParaCheckAop {
+public class ParamCheckAop {
 
 
     public Object doCheckParam(){ return "";};

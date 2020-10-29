@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.web.reactive.config.EnableWebFlux;
 
 /**
  * @author junhu.li
@@ -13,20 +14,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * @Version 1.0.0
  */
 @SpringBootApplication
-public class BootStrap extends SpringBootServletInitializer {
-
-    /**
-     * 实现SpringBootServletInitializer可以让spring-boot项目在web容器中运行
-     */
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        builder.sources(this.getClass());
-        return super.configure(builder);
-    }
-
+public class BootStrap {
 
     public static void main(String[] args) {
         SpringApplication.run(BootStrap.class, args);
-
     }
 }

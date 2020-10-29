@@ -1,10 +1,15 @@
-package program.tiger.sword.common.dp.datasource;
+package program.tiger.sword.common.db.datasource;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 数据源连接类型
  * @author TigerLee
  * @date 2018年11月16日17:45:49
  */
+@Getter
+@Setter
 public class ConnectionType {
 
     public static final String READ = "R";
@@ -27,19 +32,4 @@ public class ConnectionType {
         this.key = key;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
 }

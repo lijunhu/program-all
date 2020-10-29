@@ -1,10 +1,11 @@
 package program.tiger.sword.common.utils;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.json.MappingJacksonValue;
 
 import java.util.List;
@@ -17,12 +18,11 @@ import java.util.Map;
  * @date 2019-02-2219:00
  * @Version 1.0.0
  */
-@Slf4j
 public class JsonUtil {
 
     private final static ObjectMapper objectMapper = new ObjectMapper();
 
-    public void JsonUtil() {
+    public JsonUtil() {
 
     }
 
@@ -31,31 +31,33 @@ public class JsonUtil {
     }
 
     //objectMapper设置属性
-    static{
-
+    static {
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
     /**
      * object 转 json
-     * @param obj
-     * @return
+     *
+     * @param obj obj
+     * @return String
      */
     public static String toJson(Object obj) {
         try {
             return objectMapper.writeValueAsString(obj);
         } catch (Exception e) {
-            log.warn("write to json string error:" + obj, e);
-            return null;
+            throw new RuntimeException("Object to Json failed");
         }
     }
 
     /**
      * json 转 bean
-     * @param jsonStr
-     * @param clazz
-     * @param <T>
-     * @return
-     * @throws Exception
+     *
+     * @param jsonStr jsonStr
+     * @param clazz   class
+     * @param <T>     T
+     * @return T
+     * @throws Exception 异常信息
      */
     public static <T> T toBean(String jsonStr, Class<T> clazz) throws Exception {
         return objectMapper.readValue(jsonStr, clazz);
@@ -63,11 +65,12 @@ public class JsonUtil {
 
     /**
      * json 转map
-     * @param jsonStr
-     * @return
-     * @throws Exception
+     *
+     * @param jsonStr jsonStr
+     * @return map
+     * @throws Exception json异常
      */
-    public static Map<String, Object> toMap(String jsonStr) throws Exception {
+    public static Map<?, ?> toMap(String jsonStr) throws Exception {
         if (jsonStr != null && !"".equals(jsonStr)) {
             return objectMapper.readValue(jsonStr, Map.class);
         } else {
@@ -77,14 +80,15 @@ public class JsonUtil {
 
     /**
      * json string 转 map with javaBean
-     * @param jsonStr
-     * @param clazz
-     * @param <T>
-     * @return
-     * @throws Exception
+     *
+     * @param jsonStr jsonStr
+     * @param clazz   class
+     * @param <T>     T
+     * @return Map<String, T>
+     * @throws Exception json异常信息
      */
     public static <T> Map<String, T> toMapBean(String jsonStr, Class<T> clazz) throws Exception {
-        Map<String, Map<String, Object>> map = objectMapper.readValue(jsonStr, new TypeReference() {
+        Map<String, Map<String, Object>> map = objectMapper.readValue(jsonStr, new TypeReference<>() {
         });
         Map<String, T> result = Maps.newHashMap();
         for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
@@ -95,14 +99,15 @@ public class JsonUtil {
 
     /**
      * json 转数组
-     * @param jsonArrayStr
-     * @param clazz
-     * @param <T>
-     * @return
-     * @throws Exception
+     *
+     * @param jsonArrayStr jsonArrayStr
+     * @param clazz        class
+     * @param <T>          T
+     * @return List<T>
+     * @throws Exception json exception
      */
     public static <T> List<T> toList(String jsonArrayStr, Class<T> clazz) throws Exception {
-        List<Map<String, Object>> list = objectMapper.readValue(jsonArrayStr, new TypeReference<List<T>>() {
+        List<Map<String, Object>> list = objectMapper.readValue(jsonArrayStr, new TypeReference<>() {
         });
         List<T> result = Lists.newArrayList();
         for (Map<String, Object> map : list) {
@@ -113,22 +118,22 @@ public class JsonUtil {
 
     /**
      * map 转 bean
-     * @param map
-     * @param clazz
-     * @param <T>
-     * @return
+     *
+     * @param map   map
+     * @param clazz class
+     * @param <T>   T
+     * @return T
      */
-    public static <T> T mapToBean(Map map, Class<T> clazz) {
+    public static <T> T mapToBean(Map<?, ?> map, Class<T> clazz) {
         return objectMapper.convertValue(map, clazz);
     }
 
     /**
-     *
-     * @param value
-     * @param callback
-     * @return
+     * @param value    value
+     * @param callback callback
+     * @return MappingJacksonValue
      */
-    public static MappingJacksonValue jsonp(Object value, Class callback) {
+    public static MappingJacksonValue jsonp(Object value, Class<?> callback) {
         MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(value);
         mappingJacksonValue.setSerializationView(callback);
         return mappingJacksonValue;

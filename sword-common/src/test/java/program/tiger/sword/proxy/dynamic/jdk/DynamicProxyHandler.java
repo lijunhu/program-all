@@ -26,7 +26,7 @@ public class DynamicProxyHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("before target invoke");
 
-        Object result = method.invoke(target, args);
+        Object result = method.invoke(proxy, args);
         System.out.println("after target invoke");
         return null;
     }

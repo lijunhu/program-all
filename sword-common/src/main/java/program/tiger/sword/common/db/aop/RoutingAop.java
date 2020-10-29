@@ -1,4 +1,4 @@
-package program.tiger.sword.common.dp.aop;
+package program.tiger.sword.common.db.aop;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -7,9 +7,9 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
-import program.tiger.sword.common.dp.annotation.Read;
-import program.tiger.sword.common.dp.datasource.ConnectionType;
-import program.tiger.sword.common.dp.datasource.ConnectionTypeHolder;
+import program.tiger.sword.common.db.annotation.Read;
+import program.tiger.sword.common.db.datasource.ConnectionType;
+import program.tiger.sword.common.db.datasource.ConnectionTypeHolder;
 
 /**
  * 路由切面
@@ -22,7 +22,7 @@ import program.tiger.sword.common.dp.datasource.ConnectionTypeHolder;
 @Slf4j
 public class RoutingAop {
 
-    @Pointcut("@annotation(program.tiger.sword.common.dp.annotation.Read)")
+    @Pointcut("@annotation(program.tiger.sword.common.db.annotation.Read)")
     public void readPointcut() {
     }
 
@@ -46,7 +46,7 @@ public class RoutingAop {
         }
     }
 
-    @Pointcut("@annotation(program.tiger.sword.common.dp.annotation.Write)")
+    @Pointcut("@annotation(program.tiger.sword.common.db.annotation.Write)")
     public void writePointcut() {
     }
 

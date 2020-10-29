@@ -1,4 +1,37 @@
+
+
+
 spring:
   profiles:
-    active: @deploy.type@
+    include: application-${deploy.type}.yml
 
+
+  ##数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    readurl: jdbc:mysql://localhost:3306/test
+    username: root
+    password: admin
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 100
+      max-lifetime: 60000
+
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.ly.gateway.admin.model
+server:
+  address: 127.0.0.1
+  port: 8080
+  servlet:
+    context-path: /sword
+
+
+pagehelper:
+  dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
+    count:countSql

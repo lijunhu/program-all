@@ -1,4 +1,6 @@
-package program.tiger.sword.proxy.dynamic.jdk;
+package program.tiger.sword.proxy.dynamic.impl;
+
+import program.tiger.sword.proxy.dynamic.Person;
 
 /**
  * @author junhu.li

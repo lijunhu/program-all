@@ -1,4 +1,4 @@
-package program.tiger.sword.proxy.dynamic.jdk;
+package program.tiger.sword.proxy.dynamic;
 
 public interface Person {
 

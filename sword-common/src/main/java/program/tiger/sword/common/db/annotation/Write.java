@@ -1,4 +1,4 @@
-package program.tiger.sword.common.dp.annotation;
+package program.tiger.sword.common.db.annotation;
 
 import java.lang.annotation.*;
 
