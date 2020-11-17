@@ -1,0 +1,1 @@
+maven 打包 mvn clean package -Pdev -DskipTests spring-boot:repackage
