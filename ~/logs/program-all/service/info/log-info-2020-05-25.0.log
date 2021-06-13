@@ -1,0 +1,5 @@
+2020-05-25 17:06:31.479 [main] INFO  program.tiger.sword.http.export.TcbaseSagittarius - {"code":401,"msg":"user-token不符合规范","result":null}
+2020-05-25 17:14:57.193 [main] INFO  program.tiger.sword.http.export.TcbaseSagittarius - {"code":401,"msg":"user-token不符合规范","result":null}
+2020-05-25 17:16:54.735 [main] INFO  program.tiger.sword.http.export.TcbaseSagittarius - {"code":401,"msg":"user-token不符合规范","result":null}
+2020-05-25 17:17:50.129 [main] INFO  program.tiger.sword.http.export.TcbaseSagittarius - {"code":401,"msg":"user-token不符合规范","result":null}
+2020-05-25 17:31:29.144 [main] INFO  program.tiger.sword.http.export.TcbaseSagittarius - {"code":401,"msg":"user-token不符合规范","result":null}

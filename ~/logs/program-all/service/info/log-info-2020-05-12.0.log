@@ -1,0 +1,77 @@
+2020-05-12 15:04:55.038 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 13395 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 15:04:55.042 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 15:04:55.209 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 15:04:55.210 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 15:04:58.091 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:37:45.716 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2466 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:37:45.720 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:37:45.903 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:37:45.904 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:37:48.968 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:38:10.853 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2471 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:38:10.858 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:38:11.004 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:38:11.005 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:38:13.474 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:40:01.638 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2489 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:40:01.641 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:40:02.052 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:40:02.053 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:40:08.548 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:40:53.040 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2506 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:40:53.044 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:40:53.307 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:40:53.308 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:40:56.854 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:42:27.306 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2545 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:42:27.311 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:42:27.442 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:42:27.442 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:42:29.946 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:45:14.904 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2591 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:45:14.914 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:45:15.095 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:45:15.096 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:45:18.053 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:47:53.989 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2616 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:47:54.003 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:47:54.166 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:47:54.169 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:47:57.193 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:53:06.819 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2663 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:53:06.838 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:53:07.029 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:53:07.030 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:53:10.678 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 16:53:35.590 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2672 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 16:53:35.602 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 16:53:35.853 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 16:53:35.855 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 16:53:38.884 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-12 16:53:39.420 [restartedMain] INFO  o.s.boot.web.embedded.netty.NettyWebServer - Netty started on port(s): 8080
+2020-05-12 16:53:39.431 [restartedMain] INFO  program.tiger.sword.BootStrap - Started BootStrap in 5.193 seconds (JVM running for 7.484)
+2020-05-12 17:00:07.690 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 2757 (/Users/lijh/IdeaProjects/program-all/sword-service/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-05-12 17:00:07.701 [restartedMain] INFO  program.tiger.sword.BootStrap - No active profile set, falling back to default profiles: default
+2020-05-12 17:00:08.008 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-12 17:00:08.009 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-12 17:00:11.381 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-12 17:00:12.619 [restartedMain] INFO  o.s.boot.web.embedded.netty.NettyWebServer - Netty started on port(s): 9091
+2020-05-12 17:00:12.639 [restartedMain] INFO  program.tiger.sword.BootStrap - Started BootStrap in 6.823 seconds (JVM running for 9.624)

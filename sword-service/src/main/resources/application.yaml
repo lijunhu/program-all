@@ -3,4 +3,6 @@ spring:
     active: ${deploy.type}
     include: application-${deploy.type}.yaml
   application:
-    name:
+    name: sword-service
+server:
+  port: 8083

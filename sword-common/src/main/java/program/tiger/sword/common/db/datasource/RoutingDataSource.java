@@ -2,6 +2,8 @@ package program.tiger.sword.common.db.datasource;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jdbc.datasource.AbstractDataSource;
 import org.springframework.util.Assert;
@@ -16,8 +18,9 @@ import java.util.Random;
  * @author TigerLee
  * @date 2018年11月20日16:30:51
  */
-@Slf4j
 public class RoutingDataSource extends AbstractDataSource implements InitializingBean {
+
+    private static final Logger logger = LoggerFactory.getLogger(RoutingDataSource.class);
 
     private DataSource writeDataSource;
 
@@ -65,7 +68,7 @@ public class RoutingDataSource extends AbstractDataSource implements Initializin
 
 
     @Override
-    public Connection getConnection(String username, String password) throws SQLException {
+    public Connection getConnection(String username, String password) {
         throw new UnsupportedOperationException();
     }
 

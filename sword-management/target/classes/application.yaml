@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+    include: application-dev.yaml
+  application:
+    name: sword-management
+server:
+  port: 8080

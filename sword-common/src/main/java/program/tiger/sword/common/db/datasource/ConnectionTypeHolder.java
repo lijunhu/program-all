@@ -7,7 +7,7 @@ package program.tiger.sword.common.db.datasource;
  */
 public class ConnectionTypeHolder {
 
-    private static ThreadLocal<ConnectionType> connType = ThreadLocal.withInitial(ConnectionTypeHolder::get);
+    private static final ThreadLocal<ConnectionType> connType = ThreadLocal.withInitial(ConnectionTypeHolder::get);
 
     public static void set(ConnectionType type) {
         connType.set(type);

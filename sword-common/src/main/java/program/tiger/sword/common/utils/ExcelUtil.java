@@ -333,7 +333,7 @@ public class ExcelUtil {
                 //百分比
                 str_temp = cell.getNumericCellValue() + "";
             } else {
-                str_temp = cell.getRichStringCellValue().getString();
+                str_temp = String.valueOf(cell.getNumericCellValue());
                 cell.setCellValue(str_temp);//设置为String
             }
             return str_temp;

@@ -8,8 +8,6 @@ import lombok.Setter;
  * @author TigerLee
  * @date 2018年11月16日17:45:49
  */
-@Getter
-@Setter
 public class ConnectionType {
 
     public static final String READ = "R";
@@ -32,4 +30,19 @@ public class ConnectionType {
         this.key = key;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 }

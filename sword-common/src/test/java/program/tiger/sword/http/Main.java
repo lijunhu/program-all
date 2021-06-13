@@ -25,6 +25,10 @@ public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) throws Exception {
+        System.out.println(11&0);
+
+
+        System.out.println(System.getProperty(""));
         String data = "H4sIAAAAAAAAExWNUQrDMAxD7+LvURpcx1lvU1vRAUrZz9jd54CQeCChr+QjpzR5yV3pHB3hCvqgpgP9jWkXG0FDAJG0qxfp4ZHQAbWp0ZkL3Wk5W2XQV3vJprcsr23dfOrGtrHt8vsDktuwC30AAAA=";
         byte[] bytes = Base64.decode(data.getBytes());
         System.out.println(new String(bytes, Charset.forName("utf-8")));

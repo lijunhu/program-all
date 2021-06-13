@@ -8,7 +8,6 @@ import lombok.Getter;
  * @author TigerLee
  * @date 2018年11月26日21:13:21
  */
-@Getter
 public enum ParamCheckEnum {
     /**
      * 校验成功
@@ -37,5 +36,13 @@ public enum ParamCheckEnum {
     ParamCheckEnum(Integer code, String codeDesc) {
         this.code = code;
         this.codeDesc = codeDesc;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public String getCodeDesc() {
+        return codeDesc;
     }
 }

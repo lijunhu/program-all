@@ -88,7 +88,7 @@ public class JsonUtil {
      * @throws Exception json异常信息
      */
     public static <T> Map<String, T> toMapBean(String jsonStr, Class<T> clazz) throws Exception {
-        Map<String, Map<String, Object>> map = objectMapper.readValue(jsonStr, new TypeReference<>() {
+        Map<String, Map<String, Object>> map = objectMapper.readValue(jsonStr, new TypeReference<Map<String, Map<String, Object>>>() {
         });
         Map<String, T> result = Maps.newHashMap();
         for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
@@ -107,7 +107,7 @@ public class JsonUtil {
      * @throws Exception json exception
      */
     public static <T> List<T> toList(String jsonArrayStr, Class<T> clazz) throws Exception {
-        List<Map<String, Object>> list = objectMapper.readValue(jsonArrayStr, new TypeReference<>() {
+        List<Map<String, Object>> list = objectMapper.readValue(jsonArrayStr, new TypeReference<List<Map<String, Object>>>() {
         });
         List<T> result = Lists.newArrayList();
         for (Map<String, Object> map : list) {
@@ -137,6 +137,72 @@ public class JsonUtil {
         MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(value);
         mappingJacksonValue.setSerializationView(callback);
         return mappingJacksonValue;
+    }
+
+
+    public static String formatJson(String jsonStr) {
+        if (null == jsonStr || "".equals(jsonStr))
+            return "";
+        StringBuilder sb = new StringBuilder();
+        char last = '\0';
+        char current = '\0';
+        int indent = 0;
+        boolean isInQuotationMarks = false;
+        for (int i = 0; i < jsonStr.length(); i++) {
+            last = current;
+            current = jsonStr.charAt(i);
+            switch (current) {
+                case '"':
+                    if (last != '\\'){
+                        isInQuotationMarks = !isInQuotationMarks;
+                    }
+                    sb.append(current);
+                    break;
+                case '{':
+                case '[':
+                    sb.append(current);
+                    if (!isInQuotationMarks) {
+                        sb.append('\n');
+                        indent++;
+                        addIndentBlank(sb, indent);
+                    }
+                    break;
+                case '}':
+                case ']':
+                    if (!isInQuotationMarks) {
+                        sb.append('\n');
+                        indent--;
+                        addIndentBlank(sb, indent);
+                    }
+                    sb.append(current);
+                    break;
+                case ',':
+                    sb.append(current);
+                    if (last != '\\' && !isInQuotationMarks) {
+                        sb.append('\n');
+                        addIndentBlank(sb, indent);
+                    }
+                    break;
+                default:
+                    sb.append(current);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    /**
+     * 添加space
+     *
+     * @param sb
+     * @param indent
+     * @author lizhgb
+     * @Date 2015-10-14 上午10:38:04
+     */
+    private static void addIndentBlank(StringBuilder sb, int indent) {
+        for (int i = 0; i < indent; i++) {
+            sb.append('\t');
+        }
     }
 
 }

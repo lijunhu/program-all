@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: ${deploy.type}
+    include: application-${deploy.type}.yaml
+  application:
+    name: sword-api
+server:
+  port: 8084

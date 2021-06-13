@@ -1,7 +1,6 @@
 package program.tiger.sword.common.db.aop;
 
 
-import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -19,7 +18,6 @@ import program.tiger.sword.common.db.datasource.ConnectionTypeHolder;
  */
 @Aspect
 @Order(0)
-@Slf4j
 public class RoutingAop {
 
     @Pointcut("@annotation(program.tiger.sword.common.db.annotation.Read)")
@@ -34,9 +32,6 @@ public class RoutingAop {
             ConnectionType newType = new ConnectionType(ConnectionType.READ, read.value());
             ConnectionTypeHolder.set(newType);
             return pjp.proceed();
-        } catch (Throwable throwable) {
-            log.error("error while processing read method", throwable);
-            throw throwable;
         } finally {
             if (origType != null) {
                 ConnectionTypeHolder.set(origType);
@@ -57,9 +52,6 @@ public class RoutingAop {
             ConnectionType newType = new ConnectionType(ConnectionType.READ_WRITE, null);
             ConnectionTypeHolder.set(newType);
             return pjp.proceed();
-        } catch (Throwable throwable) {
-            log.warn("error while processing write method", throwable);
-            throw throwable;
         } finally {
             if (origType != null) {
                 ConnectionTypeHolder.set(origType);

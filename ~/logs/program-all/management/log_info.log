@@ -1,0 +1,7 @@
+2020-10-30 10:27:21.004 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.6.Final
+2020-10-30 10:27:21.422 [restartedMain] INFO  program.tiger.sword.BootStrap - Starting BootStrap on TigerLees-computor.local with PID 83876 (/Users/lijh/IdeaProjects/program-all/sword-management/target/classes started by lijh in /Users/lijh/IdeaProjects/program-all)
+2020-10-30 10:27:21.428 [restartedMain] INFO  program.tiger.sword.BootStrap - The following profiles are active: application-dev.yaml,dev
+2020-10-30 10:27:21.755 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-30 10:27:25.497 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-10-30 10:27:25.939 [restartedMain] INFO  o.s.boot.web.embedded.netty.NettyWebServer - Netty started on port(s): 8080
+2020-10-30 10:27:26.057 [restartedMain] INFO  program.tiger.sword.BootStrap - Started BootStrap in 6.493 seconds (JVM running for 9.076)
