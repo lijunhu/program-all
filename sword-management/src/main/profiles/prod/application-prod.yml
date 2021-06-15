@@ -9,9 +9,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     platform: mysql
-    url: jdbc:mysql://10.90.181.191:3306/syshotel?characterEncoding=UTF8;allowMultiQueries=true&amp;autoReconnect=true
-    username: root
-    data-password: b6f3g2
+    url:
+    username:
+    data-password:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
