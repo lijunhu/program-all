@@ -5,6 +5,7 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import org.apache.commons.compress.utils.Lists;
+import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author junhu.li
@@ -28,13 +28,14 @@ public class CacheTest {
             .refreshAfterWrite(5, TimeUnit.SECONDS)
             .build(new CacheLoader<String, Object>() {
                 @Override
-                public Object load(String key) throws Exception {
+                public Object load(@NotNull String key) throws Exception {
                     return "121231";
                 }
             });
 
     private static com.github.benmanes.caffeine.cache.Cache<Long, AtomicInteger> timeCache = Caffeine
             .newBuilder()
+            .expireAfterWrite(1L, TimeUnit.SECONDS)
             .maximumSize(10L)
             .build();
 
@@ -54,18 +55,22 @@ public class CacheTest {
     @Test
     public void testCache() throws Exception {
 
-        long now = System.currentTimeMillis()/1000;
-        for (int i=0;i<20;i++){
-            timeCache.put(now+i, new AtomicInteger(i));
+
+        System.out.println(0x0f);
+
+        long now = System.currentTimeMillis() / 1000;
+        for (int i = 0; i < 20; i++) {
+
+            Thread.sleep(1100L);
+            timeCache.put(now, new AtomicInteger(1));
         }
 
 
-
-        AtomicInteger n = timeCache.getIfPresent(now );
+        AtomicInteger n = timeCache.getIfPresent(now);
         if (n != null) {
             System.out.println("---------" + n.get());
         }
-        n = timeCache.getIfPresent(now+1);
+        n = timeCache.getIfPresent(now + 1);
         if (n != null) {
             System.out.println("---------" + n.get());
         }

@@ -26,6 +26,17 @@ public class TestList {
 
     @Test
     public void testList() throws Exception {
+
+
+        ProcessBuilder processBuilder = new ProcessBuilder();
+
+        Runtime.getRuntime().addShutdownHook(new Thread(()->{
+            executorService.shutdown();
+            processBuilder.directory();
+        }));
+
+
+
         countDownLatch = new CountDownLatch(1000);
         for (int i = 0; i < 1000; i++) {
             final int n = i;
